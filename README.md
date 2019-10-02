@@ -31,4 +31,4 @@
 
 실행 결과
 
-<img src="/screenshots/01_insta2.png" width="300" height="600"> <img src="/screenshots/01_insta.png" width="300" height="600">
+<img src="/screenshots/01_insta.png" width="300" height="600"> <img src="/screenshots/01_insta2.png" width="300" height="600">
