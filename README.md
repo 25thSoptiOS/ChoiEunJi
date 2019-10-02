@@ -1,14 +1,8 @@
-# ChoiEunJi
+## 01_instagram
 
-
-## 1 instagram
-
-핵심 코드 
+- 핵심 코드 
 
 ```swift
- @IBOutlet weak var heartBtn: UIButton!
-    
-    @IBOutlet weak var likeLabel: UILabel!
     
     var isClicked : Bool = false
    
@@ -25,10 +19,10 @@
             
         }
        
-        
     }
 ```
 
-실행 결과
+
+- 실행 결과
 
 <img src="/screenshots/01_insta.png" width="300" height="600"> <img src="/screenshots/01_insta2.png" width="300" height="600">
