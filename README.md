@@ -31,5 +31,4 @@
 
 실행 결과
 
-![screenshot](./screenshots/01_insta)
-![screenshot](./screenshots/01_insta2)
+<img src="/screenshots/01_insta2.png" width="300" height="600"> <img src="/screenshots/01_insta.png" width="300" height="600">
