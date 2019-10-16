@@ -90,6 +90,27 @@
 <br/>
 
 
+## 01_supplement_UIslider
+
+```swift 
+    @IBOutlet weak var sliderRed: UISlider!
+    @IBOutlet weak var sliderGreen: UISlider!
+    @IBOutlet weak var sliderBlue: UISlider!
+    
+    @IBAction func updateColor(_sender:UISlider){
+        self.view.backgroundColor = UIColor.init(red: CGFloat(self.sliderRed.value), green: CGFloat(self.sliderGreen.value), blue: CGFloat(self.sliderBlue.value), alpha: 1.0)
+    }
+
+```
+
+<img src="/screenshots/01_UIslider1.png" width="200" height="400"> <img src="/screenshots/01_UIslider2.png" width="200" height="400"> 
+
+
+<br/>
+<br/>
+
+
+
 ## 01_hw_instagram
 
 - 핵심 코드 
