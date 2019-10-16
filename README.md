@@ -1,24 +1,31 @@
-## 01_instagram
+# 25th_SOPT_project
+
+## 01_seminar_helloworld
+
+<img src="/screenshots/01_helloworld.png" width="300" height="600"> 
+
+<br/>
+<br/>
+
+
+## 01_hw_instagram
 
 - 핵심 코드 
 
-```swift
-    
+```swift 
     var isClicked : Bool = false
    
     @IBAction func btnClick(_ sender: Any) {
         
         if isClicked==false {
-             self.likeLabel.text = "sopt.iOS.Lover  님이 좋아합니다."
+            self.likeLabel.text = "sopt.iOS.Lover  님이 좋아합니다."
             heartBtn.setImage(UIImage(named: "hearrt-fill"), for: .normal)
             isClicked = true
         } else {
             self.likeLabel.text = ""
             heartBtn.setImage(UIImage(named: "heart"), for: .normal)
             isClicked = false
-            
-        }
-       
+        }  
     }
 ```
 
