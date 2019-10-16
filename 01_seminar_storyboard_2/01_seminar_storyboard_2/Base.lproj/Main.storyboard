@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_1_seminar_storyboard_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="첫 번째 화면" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BeW-Ze-NZe">
+                                <rect key="frame" x="159" y="114" width="96" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTR-6h-xVX">
+                                <rect key="frame" x="181" y="218" width="52" height="30"/>
+                                <state key="normal" title="인사하기"/>
+                                <connections>
+                                    <action selector="sayHello:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wU1-h8-G0V"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1U-DI-5tJ">
+                                <rect key="frame" x="173" y="308" width="69" height="30"/>
+                                <state key="normal" title="페이지 이동"/>
+                                <connections>
+                                    <segue destination="cDX-EI-qsM" kind="presentation" id="58U-KD-vHx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="f1U-DI-5tJ" firstAttribute="top" secondItem="eTR-6h-xVX" secondAttribute="bottom" constant="60" id="E95-l9-EZX"/>
+                            <constraint firstItem="f1U-DI-5tJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="173" id="I2n-3f-wmd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eTR-6h-xVX" secondAttribute="trailing" constant="181" id="VuJ-mp-ith"/>
+                            <constraint firstItem="BeW-Ze-NZe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="159" id="Wcd-Vo-vUn"/>
+                            <constraint firstItem="eTR-6h-xVX" firstAttribute="top" secondItem="BeW-Ze-NZe" secondAttribute="bottom" constant="80" id="fdK-6h-8Ek"/>
+                            <constraint firstItem="BeW-Ze-NZe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="rMF-gm-42x"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BeW-Ze-NZe" secondAttribute="trailing" constant="159" id="sgh-nH-G4d"/>
+                            <constraint firstItem="eTR-6h-xVX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="181" id="xIK-K9-LIc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f1U-DI-5tJ" secondAttribute="trailing" constant="172" id="yjj-Dm-fc4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="BeW-Ze-NZe" id="Y28-cf-p1n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="203" y="-27"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="xTX-B7-2U7">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="opU-e0-M1t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="cDX-EI-qsM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RJz-c6-O8N">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="두 번째 화면" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1En-i7-QET">
+                                <rect key="frame" x="159" y="132" width="96" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1En-i7-QET" firstAttribute="leading" secondItem="XNf-Rp-PrS" secondAttribute="leading" constant="159" id="HMn-go-Obd"/>
+                            <constraint firstItem="1En-i7-QET" firstAttribute="top" secondItem="XNf-Rp-PrS" secondAttribute="top" constant="132" id="QV1-tY-WMi"/>
+                            <constraint firstItem="XNf-Rp-PrS" firstAttribute="trailing" secondItem="1En-i7-QET" secondAttribute="trailing" constant="159" id="oO3-rv-Sxw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XNf-Rp-PrS"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="981" y="-27"/>
+        </scene>
+    </scenes>
+</document>
