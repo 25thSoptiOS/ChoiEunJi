@@ -1,13 +1,13 @@
 ## 01_seminar_helloworld
 
-<img src="/screenshots/01_helloworld.png" width="300" height="600"> 
+<img src="/screenshots/01_helloworld.png" width="200" height="400"> 
 
 <br/>
 <br/>
 
 ## 01_seminar_storyboard
 
-<img src="/screenshots/01_storyboard_1.png" width="300" height="600"> <img src="/screenshots/01_storyboard_2.png" width="300" height="600"> 
+<img src="/screenshots/01_storyboard_1.png" width="200" height="400"> <img src="/screenshots/01_storyboard_2.png" width="200" height="400"> 
 
 - 버튼 클릭 >> cmd + drag&drop >> present modally 클릭
 
@@ -26,7 +26,24 @@
     }
 ```
 
-<img src="/screenshots/01_storyboard2_1.png" width="300" height="600"> <img src="/screenshots/01_storyboard2_2.png" width="300" height="600"> 
+<img src="/screenshots/01_storyboard2_1.png" width="200" height="400"> <img src="/screenshots/01_storyboard2_2.png" width="200" height="400"> 
+
+
+<br/>
+<br/>
+
+
+## 01_supplement_UIcontrol
+
+* UI Button states
+    - Default : 누르지 않은 상태
+    - Highlighted : 누른 상태
+    - Selected : 버튼의 selected property 가 설정된 상태
+    - Disabled : 버튼을 누를 수 없도록 설정된 상태 
+    
+<br/>
+
+<img src="/screenshots/01_UIcontrol.png" width="200" height="400"> <img src="/screenshots/01_UIcontrol2.png" width="200" height="400"> 
 
 
 <br/>
@@ -57,7 +74,9 @@
 
 - 실행 결과
 
-<img src="/screenshots/01_insta.png" width="300" height="600"> <img src="/screenshots/01_insta2.png" width="300" height="600">
+<img src="/screenshots/01_insta.png" width="200" height="400"> <img src="/screenshots/01_insta2.png" width="200" height="400">
 
 <br/>
 <br/>
+
+
