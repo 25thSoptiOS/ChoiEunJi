@@ -15,6 +15,22 @@
 <br/>
 
 
+## 01_seminar_storyboard_2
+
+- 객체 제어
+```swift 
+    @IBOutlet weak var titleLabel: UILabel!
+     
+    @IBAction func sayHello(_ sender: UIButton) {
+        self.titleLabel.text = "SOPT!"
+    }
+```
+
+<img src="/screenshots/01_storyboard2_1.png" width="300" height="600"> <img src="/screenshots/01_storyboard2_2.png" width="300" height="600"> 
+
+
+<br/>
+<br/>
 
 
 ## 01_hw_instagram
