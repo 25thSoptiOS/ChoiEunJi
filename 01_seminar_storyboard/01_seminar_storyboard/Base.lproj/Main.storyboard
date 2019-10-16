@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_1_seminar_storyboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="첫 번째 화면" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LgA-tW-hyw">
+                                <rect key="frame" x="155" y="114" width="105" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCX-vk-7hG">
+                                <rect key="frame" x="181" y="231" width="52" height="30"/>
+                                <state key="normal" title="인사하기"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L0Y-4P-aEU">
+                                <rect key="frame" x="160" y="341" width="95" height="30"/>
+                                <state key="normal" title="페이지 이동"/>
+                                <connections>
+                                    <segue destination="laU-WW-a5p" kind="presentation" id="w4D-Bu-BVQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cCX-vk-7hG" secondAttribute="trailing" constant="181" id="1yr-Tm-Jnd"/>
+                            <constraint firstItem="L0Y-4P-aEU" firstAttribute="top" secondItem="cCX-vk-7hG" secondAttribute="bottom" constant="80" id="9HX-C0-Chj"/>
+                            <constraint firstItem="cCX-vk-7hG" firstAttribute="top" secondItem="LgA-tW-hyw" secondAttribute="bottom" constant="90" id="B1D-he-zTV"/>
+                            <constraint firstItem="cCX-vk-7hG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="181" id="ENV-7m-Wk1"/>
+                            <constraint firstItem="LgA-tW-hyw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="JCQ-8q-YDH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="L0Y-4P-aEU" secondAttribute="trailing" constant="159" id="cOI-og-YpQ"/>
+                            <constraint firstItem="L0Y-4P-aEU" firstAttribute="top" secondItem="cCX-vk-7hG" secondAttribute="bottom" constant="80" id="ehw-1h-Dv0"/>
+                            <constraint firstItem="L0Y-4P-aEU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="160" id="fiY-hL-yl4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LgA-tW-hyw" secondAttribute="trailing" constant="154" id="kw3-Ar-BiJ"/>
+                            <constraint firstItem="LgA-tW-hyw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="155" id="pyH-5P-LKq"/>
+                            <constraint firstItem="cCX-vk-7hG" firstAttribute="top" secondItem="LgA-tW-hyw" secondAttribute="bottom" constant="90" id="qt6-Mr-LHr"/>
+                            <constraint firstItem="LgA-tW-hyw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="vwk-N4-4lG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113.04347826086958" y="137.94642857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Ns9-9f-eO2">
+            <objects>
+                <viewController id="laU-WW-a5p" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i5E-7w-qu7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="두 번째 화면" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfP-yf-OVZ">
+                                <rect key="frame" x="166" y="130" width="83" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="q8e-i4-2P7" firstAttribute="trailing" secondItem="hfP-yf-OVZ" secondAttribute="trailing" constant="165" id="2jh-Y2-UQc"/>
+                            <constraint firstItem="hfP-yf-OVZ" firstAttribute="top" secondItem="q8e-i4-2P7" secondAttribute="top" constant="130" id="E4o-Zo-vOz"/>
+                            <constraint firstItem="hfP-yf-OVZ" firstAttribute="leading" secondItem="q8e-i4-2P7" secondAttribute="leading" constant="166" id="hpg-MP-ihe"/>
+                            <constraint firstItem="hfP-yf-OVZ" firstAttribute="top" secondItem="q8e-i4-2P7" secondAttribute="top" constant="130" id="p0O-vC-FZX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="q8e-i4-2P7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O0f-hw-QN8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="899" y="138"/>
+        </scene>
+    </scenes>
+</document>
