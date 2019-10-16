@@ -50,6 +50,24 @@
 <br/>
 
 
+## 01_supplement_image_asset
+
+* image 추가
+    - Assets.xcassets 에 이미지 파일 drag & drop
+    
+* button image 추가
+    - type >> custom 선택
+    - 각 state 별로 이미지 선택 
+    
+
+<img src="/screenshots/01_image2.png" width="200" height="400"> <img src="/screenshots/01_image1.png" width="200" height="400"> 
+
+
+<br/>
+<br/>
+
+
+
 ## 01_hw_instagram
 
 - 핵심 코드 
