@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_1_supplement_UIswitch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="candle-on" translatesAutoresizingMaskIntoConstraints="NO" id="M1h-TN-2dp">
+                                <rect key="frame" x="73" y="82" width="269" height="560"/>
+                            </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="avw-a5-d3h">
+                                <rect key="frame" x="183" y="650" width="49" height="31"/>
+                                <connections>
+                                    <action selector="switchCtrl:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ikj-Lv-NUq"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Candle is On" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JvJ-QE-8od">
+                                <rect key="frame" x="111" y="590" width="192" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JvJ-QE-8od" secondAttribute="trailing" constant="111" id="620-XZ-AUq"/>
+                            <constraint firstItem="M1h-TN-2dp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="73" id="7vm-K2-MDa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="avw-a5-d3h" secondAttribute="trailing" constant="184" id="AT7-PE-6xg"/>
+                            <constraint firstItem="JvJ-QE-8od" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="111" id="Ja2-OU-VyQ"/>
+                            <constraint firstItem="JvJ-QE-8od" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="546" id="M8j-4w-Ygd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M1h-TN-2dp" secondAttribute="trailing" constant="72" id="VL6-Aj-QPL"/>
+                            <constraint firstItem="avw-a5-d3h" firstAttribute="top" secondItem="M1h-TN-2dp" secondAttribute="bottom" constant="8" id="VMc-M4-bO1"/>
+                            <constraint firstItem="M1h-TN-2dp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="38" id="Vaf-TR-3nw"/>
+                            <constraint firstItem="avw-a5-d3h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="183" id="it4-Nb-dRl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="candleImage" destination="M1h-TN-2dp" id="VVm-p3-deI"/>
+                        <outlet property="candleLabel" destination="JvJ-QE-8od" id="6ru-g7-bIs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="candle-on" width="400" height="560"/>
+    </resources>
+</document>
