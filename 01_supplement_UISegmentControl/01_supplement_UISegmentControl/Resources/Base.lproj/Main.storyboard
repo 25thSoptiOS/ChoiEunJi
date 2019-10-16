@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3sy-41-enk">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="zSk-aX-00O">
+            <objects>
+                <navigationController id="3sy-41-enk" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qTM-lg-hBr">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="nBk-qY-jmd" kind="relationship" relationship="rootViewController" id="DnU-xT-BOV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fk4-X3-G2h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1433" y="-452"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tH3-s6-kWM">
+            <objects>
+                <viewController title="View Controller" id="nBk-qY-jmd" customClass="ViewController" customModule="_1_supplement_UISegmentControl" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qFH-yb-Ber">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuV-im-Hfa">
+                                <rect key="frame" x="151" y="344" width="112" height="30"/>
+                                <state key="normal" title="세그먼트 상태 전달"/>
+                                <connections>
+                                    <segue destination="4kP-Ms-bdF" kind="show" id="iej-SL-4Mg"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="iTa-rw-q6u">
+                                <rect key="frame" x="154.5" y="399" width="105" height="32"/>
+                                <segments>
+                                    <segment title="왼쪽"/>
+                                    <segment title="오른쪽"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="q3G-Ox-0Nm" firstAttribute="trailing" secondItem="yuV-im-Hfa" secondAttribute="trailing" constant="151" id="HyV-K2-uXi"/>
+                            <constraint firstItem="iTa-rw-q6u" firstAttribute="top" secondItem="yuV-im-Hfa" secondAttribute="bottom" constant="25" id="KAT-iC-fTx"/>
+                            <constraint firstItem="iTa-rw-q6u" firstAttribute="centerX" secondItem="qFH-yb-Ber" secondAttribute="centerX" id="NJ2-V6-WnW"/>
+                            <constraint firstItem="iTa-rw-q6u" firstAttribute="top" secondItem="yuV-im-Hfa" secondAttribute="bottom" constant="25" id="Svf-Gu-hNY"/>
+                            <constraint firstItem="yuV-im-Hfa" firstAttribute="leading" secondItem="q3G-Ox-0Nm" secondAttribute="leading" constant="151" id="Vcf-DX-Tp0"/>
+                            <constraint firstItem="yuV-im-Hfa" firstAttribute="top" secondItem="q3G-Ox-0Nm" secondAttribute="top" constant="256" id="ZgF-b4-ht1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="q3G-Ox-0Nm"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="처음 화면" id="mGR-EQ-w0J"/>
+                    <connections>
+                        <outlet property="leftRightSegControl" destination="iTa-rw-q6u" id="9fw-ZY-IaB"/>
+                        <segue destination="4kP-Ms-bdF" kind="show" id="4Vg-T7-7qj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tea-rX-N23" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2283" y="-452"/>
+        </scene>
+        <!--Seg Control View Controller-->
+        <scene sceneID="eDA-aX-ovM">
+            <objects>
+                <viewController id="4kP-Ms-bdF" customClass="SegControlViewController" customModule="_1_supplement_UISegmentControl" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U2W-UO-TJ4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dIo-So-o3p">
+                                <rect key="frame" x="154.5" y="432.5" width="105" height="32"/>
+                                <segments>
+                                    <segment title="왼쪽"/>
+                                    <segment title="오른쪽"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="segment" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="puV-sw-clI">
+                                <rect key="frame" x="90" y="327" width="235" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dIo-So-o3p" firstAttribute="centerY" secondItem="U2W-UO-TJ4" secondAttribute="centerY" id="8qi-w8-jbC"/>
+                            <constraint firstItem="dIo-So-o3p" firstAttribute="top" secondItem="puV-sw-clI" secondAttribute="bottom" constant="85" id="EEK-S3-6cg"/>
+                            <constraint firstItem="dIo-So-o3p" firstAttribute="centerX" secondItem="U2W-UO-TJ4" secondAttribute="centerX" id="VDx-ob-UnA"/>
+                            <constraint firstItem="puV-sw-clI" firstAttribute="centerX" secondItem="U2W-UO-TJ4" secondAttribute="centerX" id="ggW-Sx-Wq2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="idl-L8-FbE"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="heX-ZL-jDE"/>
+                    <connections>
+                        <outlet property="displayLabel" destination="puV-sw-clI" id="Dlo-xP-4fD"/>
+                        <outlet property="leftRightSegControl" destination="dIo-So-o3p" id="hBQ-Gh-nXQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZbU-Z6-tzA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3030" y="-452"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="iej-SL-4Mg"/>
+    </inferredMetricsTieBreakers>
+</document>
