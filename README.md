@@ -1,11 +1,20 @@
-# 25th_SOPT_project
-
 ## 01_seminar_helloworld
 
 <img src="/screenshots/01_helloworld.png" width="300" height="600"> 
 
 <br/>
 <br/>
+
+## 01_seminar_storyboard
+
+<img src="/screenshots/01_storyboard_1.png" width="300" height="600"> <img src="/screenshots/01_storyboard_2.png" width="300" height="600"> 
+
+- 버튼 클릭 >> cmd + drag&drop >> present modally 클릭
+
+<br/>
+<br/>
+
+
 
 
 ## 01_hw_instagram
@@ -33,3 +42,6 @@
 - 실행 결과
 
 <img src="/screenshots/01_insta.png" width="300" height="600"> <img src="/screenshots/01_insta2.png" width="300" height="600">
+
+<br/>
+<br/>
