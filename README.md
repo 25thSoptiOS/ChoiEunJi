@@ -66,6 +66,28 @@
 <br/>
 <br/>
 
+## 01_supplement_UIswitch
+
+```swift 
+    @IBOutlet weak var candleLabel: UILabel!
+    @IBOutlet weak var candleImage: UIImageView!
+    
+    @IBAction func switchCtrl(_ sender: UISwitch) {
+        if sender.isOn {
+            self.candleLabel.text = "Candle is On"
+            candleImage.image = UIImage(named: "candle-on")
+        } else {
+            self.candleLabel.text = "Candle is Off"
+            candleImage.image = UIImage(named: "candle-off")
+        }
+    }
+```
+
+<img src="/screenshots/01_switch_on.png" width="200" height="400"> <img src="/screenshots/01_switch_off.png" width="200" height="400"> 
+
+
+<br/>
+<br/>
 
 
 ## 01_hw_instagram
