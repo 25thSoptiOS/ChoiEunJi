@@ -110,11 +110,60 @@
 <br/>
 
 
+## 01_supplement_UISegmentController
+
+- segment 값 전달하기
+
+1. View Controller
+
+```swift 
+    @IBOutlet weak var leftRightSegControl: UISegmentedControl!
+    var makeString: String!
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destVC = segue.destination as! SegControlViewController
+        
+        let situation: String! = leftRightSegControl.titleForSegment(at: leftRightSegControl.selectedSegmentIndex)
+        
+        destVC.title = situation
+        
+        makeString = situation
+        makeString += " 선택됨"
+        
+        destVC.info = makeString
+        destVC.selectedSegmentIndex = leftRightSegControl.selectedSegmentIndex
+    }
+```
+
+2. SegControl View Controller
+
+```swift 
+    @IBOutlet weak var displayLabel: UILabel!
+    @IBOutlet weak var leftRightSegControl: UISegmentedControl!
+    
+    var selectedSegmentIndex: Int!
+    var info: String!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        if let contentString = info{
+            displayLabel.text = contentString
+        }
+        
+        if let whichSelect = selectedSegmentIndex {
+            leftRightSegControl.selectedSegmentIndex = whichSelect
+        }
+    }
+```
+
+
+<img src="/screenshots/01_leftsend.png" width="200" height="400"> <img src="/screenshots/01_leftselected.png" width="200" height="400"> <img src="/screenshots/01_rightsend.png" width="200" height="400">  <img src="/screenshots/01_rightselected.png" width="200" height="400"> 
+
+
+
+
 
 ## 01_hw_instagram
-
-- 핵심 코드 
-
 ```swift 
     var isClicked : Bool = false
    
@@ -131,9 +180,6 @@
         }  
     }
 ```
-
-
-- 실행 결과
 
 <img src="/screenshots/01_insta.png" width="200" height="400"> <img src="/screenshots/01_insta2.png" width="200" height="400">
 
