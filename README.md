@@ -160,7 +160,8 @@
 <img src="/screenshots/01_leftsend.png" width="200" height="400"> <img src="/screenshots/01_leftselected.png" width="200" height="400"> <img src="/screenshots/01_rightsend.png" width="200" height="400">  <img src="/screenshots/01_rightselected.png" width="200" height="400"> 
 
 
-
+<br/>
+<br/>
 
 
 ## 01_hw_instagram
@@ -185,5 +186,45 @@
 
 <br/>
 <br/>
+
+
+## 02_seminar_segue
+
+- prepare : view controller 간 데이터 전달 함수 
+
+```swift
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination
+        let button = sender as! UIButton
+        destination.title = button.titleLabel?.text
+        destination.view.backgroundColor = button.titleColor(for: .normal)
+    }
+```
+
+<img src="/screenshots/02_segue.png" width="200" height="400"> <img src="/screenshots/02_segue_green.png" width="200" height="400">  <img src="/screenshots/02_segue_pink.png" width="200" height="400">
+
+<br/>
+<br/>
+
+
+
+
+
+## 02_hw_autoLayout
+
+- 버튼 테두리 처리 
+
+```swift 
+  override func viewDidLoad() {
+        super.viewDidLoad()
+       
+        self.loginBtn.layer.borderColor = UIColor.white.cgColor
+        self.loginBtn.layer.borderWidth = 1
+        self.loginBtn.layer.cornerRadius = 15
+    }
+
+```
+
+<img src="/screenshots/02_hw_auto.png" width="200" height="400"> 
 
 
