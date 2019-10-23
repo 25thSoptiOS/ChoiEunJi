@@ -228,3 +228,19 @@
 <img src="/screenshots/02_hw_auto.png" width="200" height="400"> 
 
 
+<br/>
+<br/>
+
+
+## 02_hw_calculator
+
+- Root Vertical Stack View 
+    - Distribution : Fill Equally
+    - Spacing : 10
+- Horizontal Stack View (버튼 네 개)
+    - Distribution : Fill Equally 
+    - Spacing : 10
+
+
+<img src="/screenshots/02_cal_1.png" width="200" height="370"> <img src="/screenshots/02_cal_2.png" width="200" height="370">
+
