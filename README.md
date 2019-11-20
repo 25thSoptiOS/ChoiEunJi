@@ -1,10 +1,3 @@
-## 01_seminar_helloworld
-
-<img src="/screenshots/01_helloworld.png" width="200" height="400"> 
-
-<br/>
-<br/>
-
 ## 01_seminar_storyboard
 
 <img src="/screenshots/01_storyboard_1.png" width="200" height="400"> <img src="/screenshots/01_storyboard_2.png" width="200" height="400"> 
@@ -243,4 +236,140 @@
 
 
 <img src="/screenshots/02_cal_1.png" width="200" height="370"> <img src="/screenshots/02_cal_2.png" width="200" height="370">
+
+
+
+<br/>
+<br/>
+
+
+## 04_hw_signup_server
+
+1. Create NetworkResult.swift
+
+```swift
+import Foundation
+
+enum NetworkResult<T>{
+    case success(T)
+    case requestErr(T)
+    case pathErr
+    case serverErr
+    case networkFail
+}
+```
+
+<br/>
+
+2. Create ResponseString.swift
+
+- 성공했을 때 response body 작성
+
+```swift
+import Foundation
+
+struct ResponseString2: Codable {
+    let success: Bool
+    let message: String
+    let data: Int
+}
+
+```
+
+<br/>
+
+
+3. Create APIService
+
+```swift
+
+    static let shared = SignupService()
+
+```
+- singleton pattern : 모든 프로그램 생애 주기에서 딱 한 번 생성
+- 모든 파일에서 전역으로 접근 가능
+
+
+<br/>
+
+```swift
+Alamofire.request(APIConstants.SignupURL, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header)
+            .responseData { response in // response 에 결과값 저장 -> print 해보기
+                
+                // parameter 위치
+                switch response.result {
+                    
+                // 통신 성공 - 네트워크 연결
+                case .success:
+                    if let value = response.result.value {
+                        
+                        if let status = response.response?.statusCode {
+                            switch status {
+                            case 200:
+                                do {
+                                    let decoder = JSONDecoder()
+                                    print("value", value)
+                                    let result = try decoder.decode(ResponseString2.self, from: value)
+                                    
+                                    // ResponseString에 있는 success로 분기 처리
+                                    switch result.success {
+                                        
+                                    case true: // 진짜 회원가입 성공인 경우
+                                        print("success")
+                                        completion(.success(result.data)) // NetworkResult 에서 접근
+                                    case false:
+                                        completion(.requestErr(result.message))
+                                    }
+                                }
+                                catch {
+                                    completion(.pathErr)
+                                    print(error.localizedDescription)
+                                    print(APIConstants.SignupURL)
+                                }
+                            case 400:
+                                completion(.pathErr)
+                            case 500:
+                                completion(.serverErr)
+                            default:
+                                break
+                            }// switch
+                        }// if let
+                    }
+                    break
+                    
+```
+- 서버로 request 전송 - http 비동기 통신 라이브러리 : 함수가 호출된 순차적으로 진행됨
+
+<br/>
+
+
+4. Connect with SigninViewController
+
+```swift
+SignupService.shared.signup(id, pwd, name, phone) {
+            
+            data in
+            switch data {
+                    
+            case .success(let data):
+                
+                print(data)
+                print ("success")
+                break
+            case .requestErr(_):
+                print(".requestErr")
+                break
+            case .pathErr:
+                print("pathErr")
+                break
+            case .serverErr:
+                print("serverErr")
+                break
+            case .networkFail:
+                print("networkErr")
+                break
+            }
+        }
+```
+- VC 에서 id, pwd, name, email 을 받아 와 SignupService 를 호출한다.
 
