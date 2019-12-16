@@ -373,3 +373,92 @@ SignupService.shared.signup(id, pwd, name, phone) {
 ```
 - VC 에서 id, pwd, name, email 을 받아 와 SignupService 를 호출한다.
 
+
+<br/>
+
+
+# 05_GS25_WITHSOPT
+
+1. Kingfisher 로 QR image load
+
+
+```swift
+import Kingfisher
+
+
+  let url = URL(string: "http://files.itworld.co.kr/archive/image/2016/10/qr-code-give-me-up-100725354-medium.jpg")
+        
+  let qrImageView = UIImageView()
+  qrImageView.kf.setImage(with: url)
+  
+  self.view.addSubview(qrImageView)
+        
+```
+
+<img src="/screenshots/05_1.png" width="200" height="430">
+
+
+<br/> 
+
+
+
+2. ScrollView + StackView 로 mypage 구현
+ 
+ 
+<img src="/screenshots/05_2.png" width="200" height="430">  <img src="/screenshots/05_3.png" width="200" height="430"> 
+
+
+<br/>
+
+
+3. 서버와 합동 세미나 - Table View 로 주문 화면 구현
+ 
+```swift
+var dataSet = [DataClass]() // cell 에 들어갈 데이터 저장 배열
+
+extension OrderViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataSet.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "dataCell", for: indexPath) as? DataTableViewCell else { return UITableViewCell() }
+        
+        cell.productName.text = "\(dataSet[indexPath.row].name)"
+        cell.productPrice.text = "\(dataSet[indexPath.row].price) 원"
+        cell.productCreatedAt.text = "\(dataSet[indexPath.row].create_time)"
+
+        let urlStr = dataSet[indexPath.row].image_url
+        let url = URL(string: urlStr)
+        
+        cell.productImageView.kf.setImage(with: url)
+         
+        return cell
+    }    
+}
+
+```
+
+```swift
+import Foundation
+import UIKit
+
+class DataTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var productImageView: UIImageView!
+    
+    @IBOutlet weak var productName: UILabel!
+    @IBOutlet weak var productPrice: UILabel!
+    @IBOutlet weak var productCreatedAt: UILabel!
+    
+    @IBOutlet weak var reserveButton: UIButton!
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
+}
+
+```
+
+<img src="/screenshots/05_4.png" width="200" height="430"> 
